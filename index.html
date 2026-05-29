@@ -196,7 +196,7 @@
     .sky-halcyon   { --c1: hsl(178 72% 60%);--c2: hsl(198 78% 62%);--c3: hsl(240 64% 64%); --c4: hsl(280 60% 62%); --glow: hsl(198 80% 60% / .55);--glow-far: hsl(240 64% 60% / .3);--sky-bg:#031018; }
 
     /* ───────────────────────── hero ───────────────────────── */
-    .hero { padding: 40px 0 64px; }
+    .hero { padding-block: 40px 64px; }   /* padding-block (not the shorthand) so .wrap's horizontal gutter survives */
     .hero-grid {
       display: grid;
       grid-template-columns: 1.05fr 0.95fr;
@@ -450,7 +450,7 @@
     @media (max-width: 720px) { .tech-grid { grid-template-columns: 1fr; gap: 24px; } }
 
     /* ───────────────────────── final cta ───────────────────────── */
-    .final { text-align: center; padding: 80px 0 72px; }
+    .final { text-align: center; padding-block: 80px 72px; }
     .final .orb { --size: 150px; margin: 0 auto 34px; }
     .final h2 { font-weight: 300; font-size: clamp(28px, 4vw, 42px); letter-spacing: -0.02em; margin: 0 0 16px; }
     .final p { color: var(--dim); max-width: 28em; margin: 0 auto 30px; }
