@@ -203,6 +203,9 @@
       gap: clamp(32px, 5vw, 64px);
       align-items: center;
     }
+    /* min-width:0 stops grid blowout — without it the fixed-width orb column
+       refuses to shrink and the whole grid overflows, clipping the text left. */
+    .hero-text, .hero-stage { min-width: 0; }
     .hero-eyebrow {
       display: inline-flex; align-items: center; gap: 9px;
       margin-bottom: 26px;
@@ -263,7 +266,7 @@
     .hero-stage { display: flex; justify-content: center; align-items: center; min-height: 380px; }
     .hero-stage .orb { --size: clamp(260px, 34vw, 380px); }
 
-    @media (max-width: 900px) {
+    @media (max-width: 1024px) {
       .hero-grid { grid-template-columns: 1fr; gap: 24px; text-align: center; }
       .hero-eyebrow, .cta-row, .hero-meta { justify-content: center; }
       .hero-sub { margin-left: auto; margin-right: auto; }
